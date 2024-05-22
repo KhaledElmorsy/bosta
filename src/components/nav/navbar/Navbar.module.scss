@@ -26,6 +26,7 @@ $header-height: 80px;
 
     .sideMenu {
       display: none;
+      z-index: 999;
 
       &.open {
         display: flex;
