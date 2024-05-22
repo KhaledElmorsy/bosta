@@ -7,23 +7,40 @@
 
   display: flex;
 
-  @include media.desktop {}
+  @include media.desktop {
+    width: var(--page-max-width);
+    height: 200px;
+    flex-direction: column;
+  }
 
   .shipmentInfo {
     width: 50%;
     height: 100%;
-    padding: 20px;
+    padding: 50px 20px;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    
-    border-right: solid 2px var(--color-border-gray);
 
-    &:dir(rtl){
+    $details-border: solid 2px var(--color-border-gray);
+
+    border-right: $details-border;
+
+    &:dir(rtl) {
       border-right: none;
-      border-left: solid 2px var(--color-border-gray);
+      border-left: $details-border;
+    }
+
+    @include media.desktop {
+      width: 100%;
+      height: 50%;
+      flex-direction: row;
+      padding: 5px 30px;
+      justify-content: space-between;
+      border-right: none !important;
+      border-left: none !important;
+      border-bottom: $details-border;
     }
 
     .infoBlock {
@@ -32,10 +49,15 @@
       align-items: center;
       gap: 5px;
 
+      @include media.desktop {
+        align-items: start;
+        gap: 0;
+      }
+
       .title {
         color: var(--color-text-light);
         font-weight: 600;
-        font-size: 0.9rem;
+        font-size: 0.92rem;
         text-align: center;
       }
 
@@ -43,6 +65,10 @@
         font-size: 1.1rem;
         font-weight: 800;
         text-align: center;
+        
+        @include media.desktop {
+          font-size: 1rem;
+        }
       }
     }
   }
