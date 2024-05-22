@@ -42,7 +42,7 @@ const enAR: LocaleTranslations = {
     reason: {
       'Uncovered Zone': 'العنوان خارج نطاق الخدمة',
       'Cancellation - The customer refuses to give the shipment to the star':
-        'تم إلغاء الشحنة لأنك رفضت تسليم الشحنة إلى مندوبنا',
+        'رفضت تسليم الشحنة إلى مندوبنا',
     },
     state: {
       AVAILABLE_FOR_PICKUP: 'الشحنة متاحة للاستلام',
