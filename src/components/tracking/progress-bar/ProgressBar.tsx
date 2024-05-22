@@ -56,7 +56,7 @@ export default function ProgressBar() {
         const isComplete = i < currentStep - 1;
         const isCurrent = i === currentStep - 1;
         return (
-          <div className={style.step}>
+          <div className={style.step} key={title}>
             <div className={style.iconContainer}>
               <div
                 className={clsx(
