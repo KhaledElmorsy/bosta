@@ -1,7 +1,8 @@
 import { useShipment } from '@/contexts/shipment';
 import { useLocale } from '@/contexts/locale';
-import style from './TrackingDetails.module.scss';
 import { trackingColorMap } from '@/misc/tracking';
+import ProgressBar from '../progress-bar/ProgressBar';
+import style from './TrackingDetails.module.scss';
 
 export default function TrackingDetails() {
   const { shipment } = useShipment();
@@ -55,7 +56,9 @@ export default function TrackingDetails() {
           </p>
         </div>
       </div>
-      <div className={style.progress}></div>
+      <div className={style.progress}>
+        <ProgressBar />
+      </div>
     </div>
   );
 }
