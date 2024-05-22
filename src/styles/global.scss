@@ -1,5 +1,41 @@
-*, *::before, *::after {
+@import 'https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Inter:wght@100..900&display=swap';
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+button {
+  border: none;
+  background: none;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+:root {
+  --color-main: #E30613;
+  --color-warning: #E30613;
+  --color-success: #3ec22c;
+  --color-waiting: #f9bb05;
+  --color-background-shade: #e3e3e3;
+  --color-border-gray: #e0e0e0;
+  --color-text-main: #666e83;
+  --color-text-dark: #252d48;
+  --color-text-light: #a2acbf;
+
+  --page-max-width: 800px;
+}
+
+*:lang(ar) {
+  font-family: Cairo, system-ui;
+}
+
+*:lang(en) {
+  font-family: Inter, Arial, Helvetica, sans-serif
 }
