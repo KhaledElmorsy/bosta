@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useLocale } from '@/contexts/locale';
-import { useMediaQuery } from 'usehooks-ts';
+import { useIsMobile } from '@/hooks';
 
 import style from './Navbar.module.scss';
 import clsx from 'clsx';
@@ -12,7 +12,7 @@ import TrackButton from '../track-button/TrackButton';
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
-  const isMobile = useMediaQuery('(max-width: 992px)');
+  const isMobile = useIsMobile();
   const { t } = useLocale();
 
   useEffect(() => {
