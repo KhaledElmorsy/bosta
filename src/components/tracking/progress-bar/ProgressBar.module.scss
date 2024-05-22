@@ -116,22 +116,22 @@ $light-gray: #e8e8e8;
 
   .meterContainer {
     position: absolute;
-    top: $container-v-padding-mobile + $step-max-height-mobile/2;
-    bottom: $container-v-padding-mobile + $step-max-height-mobile/2;
-    left: $icon-container-width/2 + $container-h-padding-mobile - $meter-thickness/2;
+    top: $container-v-padding-mobile + calc($step-max-height-mobile/2);
+    bottom: $container-v-padding-mobile + calc($step-max-height-mobile/2);
+    left: calc($icon-container-width/2) + $container-h-padding-mobile - calc($meter-thickness/2);
     width: $meter-thickness;
     background-color: $light-gray;
 
     &:dir(rtl) {
       left: unset;
-      right: $icon-container-width/2 + $container-h-padding-mobile - $meter-thickness/2;
+      right: calc($icon-container-width/2) + $container-h-padding-mobile - calc($meter-thickness/2);
     }
 
     @include media.desktop {
       height: $meter-thickness;
-      top: $icon-container-width/2 + $container-v-padding-desktop - $meter-thickness/2;
-      left: $step-width-desktop/2 + $container-h-padding-desktop - $meter-thickness/2 !important;
-      right: $step-width-desktop/2 + $container-h-padding-desktop - $meter-thickness/2 !important;
+      top: calc($icon-container-width/2) + $container-v-padding-desktop - calc( $meter-thickness/2);
+      left: calc($step-width-desktop/2) + $container-h-padding-desktop - calc($meter-thickness/2) !important;
+      right: calc($step-width-desktop/2) + $container-h-padding-desktop - calc($meter-thickness/2) !important;
       width: unset;
     }
 
