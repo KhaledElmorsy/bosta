@@ -1,5 +1,9 @@
 import style from './ProgressBar.module.scss';
-import { trackingColorMap, getShipmentStep } from '@/misc/tracking';
+import {
+  trackingColorMap,
+  getShipmentStep,
+  getShipmentReason,
+} from '@/misc/tracking';
 import { useShipment } from '@/contexts/shipment';
 import { useLocale } from '@/contexts/locale';
 import { useIsMobile } from '@/hooks';
@@ -44,6 +48,8 @@ export default function ProgressBar() {
     ? { height: meterProgress }
     : { width: meterProgress };
 
+  const reason = getShipmentReason(shipment.TransitEvents);
+
   return (
     <div className={style.container}>
       {steps.map(({ icon, title }, i) => {
@@ -67,12 +73,19 @@ export default function ProgressBar() {
                 {isComplete ? <FaCheck /> : icon}
               </div>
             </div>
-            <p
-              style={isComplete || isCurrent ? { fontWeight: 700 } : {}}
-              className={style.title}
-            >
-              {title}
-            </p>
+            <div className={style.stepText}>
+              <p
+                style={isComplete || isCurrent ? { fontWeight: 700 } : {}}
+                className={style.title}
+              >
+                {title}
+              </p>
+              {reason && isCurrent && (
+                <p className={style.reason} style={{ color: trackingColor }}>
+                  {t(`tracking.reason.${reason}`)}
+                </p>
+              )}
+            </div>
           </div>
         );
       })}

@@ -89,13 +89,25 @@ $light-gray: #e8e8e8;
       }
     }
 
-    .title {
-      font-size: 0.8rem;
+    .stepText{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-      @include media.desktop {
-        font-size: 0.75rem;
-        text-align: center;
+      .title {
+        font-size: 0.8rem;
+        
+        @include media.desktop {
+          font-size: 0.75rem;
+          text-align: center;
+        }
       }
+    }
+
+    .reason {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-align: center;
     }
 
   }
