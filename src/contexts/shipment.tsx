@@ -34,7 +34,8 @@ export function ShipmentProvider({
       .then((shipmentData) => {
         setShipment(shipmentData);
       })
-      .catch(() => {
+      .catch((error) => {
+        console.error(error)
         setShipment(null);
       })
       .finally(() => {

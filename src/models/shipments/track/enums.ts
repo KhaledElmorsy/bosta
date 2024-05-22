@@ -22,4 +22,5 @@ export const deliveryHubSchema = z.enum([
   'El-Mansoura Hub',
   'Beni Suef Hub',
   'Cairo Sorting Facility',
+  'FM & Reverse Hub'
 ]);

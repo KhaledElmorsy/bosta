@@ -37,6 +37,7 @@ const enUS: LocaleTranslations = {
       'Beni Suef Hub': 'Beni Suef Hub',
       'Cairo Sorting Facility': 'Cairo Sorting Facility',
       'El-Mansoura Hub': 'El-Mansoura Hub',
+      'FM & Reverse Hub': 'FM & Reverse Hub'
     },
     reason: {
       'Uncovered Zone': 'Shipment area not covered',

@@ -37,6 +37,7 @@ const enAR: LocaleTranslations = {
       'Beni Suef Hub': 'بني سويف',
       'Cairo Sorting Facility': 'مستودع بوسطة',
       'El-Mansoura Hub': 'المنصورة',
+      'FM & Reverse Hub': 'مركز FM & Reverse' 
     },
     reason: {
       'Uncovered Zone': 'العنوان خارج نطاق الخدمة',
