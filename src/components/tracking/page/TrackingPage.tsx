@@ -18,6 +18,14 @@ export default function TrackingPage() {
             <h3>{t('tracking.page.shipmentDetails')}</h3>
             <ShipmentUpdates />
           </div>
+          <div className={style.secondaryContainer}>
+            <div className={style.addressContainer}>
+              <h3>{t('tracking.page.delvieryAddress')}</h3>
+              <div className={style.address}>
+                <p>{t('tracking.page.sampleAddress')}</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </ShipmentProvider>
