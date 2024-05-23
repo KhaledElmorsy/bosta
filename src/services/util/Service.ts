@@ -4,7 +4,7 @@ export default class Service {
   path: string;
 
   constructor(path: string) {
-    this.path = `/api/${path}`;
+    this.path = `https://tracking.bosta.co${path}`;
   }
 
   async _get<T extends z.ZodSchema>(
