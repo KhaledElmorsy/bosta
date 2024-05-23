@@ -4,6 +4,8 @@ import TrackingDetails from '../details/TrackingDetails';
 import { useLocale } from '@/contexts/locale';
 import ShipmentUpdates from '../updates/ShipmentUpdates';
 import style from './TrackingPage.module.scss';
+import Button from '@/components/common/button/Button';
+import supportImage from '@/assets/images/tracking/support.jpg';
 
 export default function TrackingPage() {
   const { t } = useLocale();
@@ -23,6 +25,13 @@ export default function TrackingPage() {
               <h3>{t('tracking.page.delvieryAddress')}</h3>
               <div className={style.address}>
                 <p>{t('tracking.page.sampleAddress')}</p>
+              </div>
+            </div>
+            <div className={style.supportContainer}>
+              <img src={supportImage}/>
+              <div className={style.info}>
+                <p className={style.question}>{t('tracking.page.troubleshootQuestion')}</p>
+                <Button>{t('tracking.page.troubleshootButton')}</Button>
               </div>
             </div>
           </div>
