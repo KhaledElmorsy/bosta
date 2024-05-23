@@ -33,9 +33,12 @@ table {
       text-align: center;
       border-bottom: 1px var(--color-border-gray) solid;
       font-weight: 600;
+      padding: 10px 5px;
+
+      font-size: min(3vw, 0.9rem);
 
       .reason {
-        font-size: 0.9rem;
+        font-size: min(2.6vw, 0.8rem);
       }
     }
   }
