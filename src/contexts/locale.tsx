@@ -66,6 +66,7 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
   function t(key: LocaleKey) {
     const path = key.split('.');
     const translation = path.reduce(
+      // @ts-expect-error Would need another complex type to rebuild path array into nested keys
       (acc, key) => acc[key],
       localeMap[locale].translations
     );
