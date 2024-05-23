@@ -1,6 +1,5 @@
 import Navbar from '@/components/nav/navbar/Navbar';
 import { Route, Navigate, Routes } from 'react-router-dom';
-import { ShipmentProvider } from '@/contexts/shipment';
 import './App.scss';
 import TrackingPage from '@/components/tracking/page/TrackingPage';
 
