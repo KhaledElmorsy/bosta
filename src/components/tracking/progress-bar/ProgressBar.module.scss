@@ -95,7 +95,7 @@ $light-gray: #e8e8e8;
       align-items: center;
 
       .title {
-        font-size: 0.8rem;
+        font-size: min(3vw, 0.8rem);
         
         @include media.desktop {
           font-size: 0.75rem;
