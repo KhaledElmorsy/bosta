@@ -44,7 +44,10 @@ export default function TrackButton({ className }: TrackButtonProps) {
             />
             <Link
               to={`/track/${trackingNumber}`}
-              onClick={() => setIsOpen(false)}
+              onClick={() => {
+                setIsOpen(false);
+                setTrackingNumber('');
+              }}
             >
               <IoIosSearch />
             </Link>
