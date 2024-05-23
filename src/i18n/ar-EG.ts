@@ -13,6 +13,7 @@ const enAR: LocaleTranslations = {
     sales: 'كلم المبيعات',
     track: 'تتبع شحنتك',
     login: 'تسجيل الدخول',
+    trackingNumber: 'رقم التتبع'
   },
   tracking: {
     page: {

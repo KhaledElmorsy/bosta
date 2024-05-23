@@ -13,6 +13,7 @@ const enUS: LocaleTranslations = {
     sales: 'Contact Sales',
     track: 'Track Shipment',
     login: 'Login',
+    trackingNumber: 'Tracking number'
   },
   tracking: {
     page: {

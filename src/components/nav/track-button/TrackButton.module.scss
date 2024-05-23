@@ -1,0 +1,85 @@
+.trackButton {
+  position: relative;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  &.open {
+    border-radius: 7px 7px 0 0;
+    border: 1px solid var(--color-border-gray);
+    border-bottom: none;
+    color: var(--color-main);
+  }
+}
+
+.trackingNumberWindow {
+  z-index: 2;
+  width: 250px;
+  height: 120px;
+  padding: 20px;
+
+  position: absolute;
+  border-radius: 7px;
+  top: 65px;
+  right: 0;
+
+  border: 1px solid var(--color-border-gray);
+  background-color: white;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-evenly;
+  gap: 15px;
+
+  &:dir(rtl) {
+    left: 0;
+    right: unset;
+  }
+
+  p {
+    font-size: 0.8rem;
+    color: var(--color-text-light);
+  }
+
+  .inputContainer {
+    $border-radius: 5px;
+    $container-height: 35px;
+
+    width: 100%;
+    
+    display: flex;
+    height: $container-height;
+
+    input {
+      padding: 0 5px;
+      border: solid 0.5px var(--color-border-gray);
+      outline: none;
+      border-radius: $border-radius 0 0 $border-radius;
+      min-width: 0;
+      flex-grow: 1;
+
+      &::placeholder {
+        color: #e2e2e2
+      }
+    }
+
+    a {
+      background-color: var(--color-main);
+      display: grid;
+      place-content: center;
+      border-radius: 0 $border-radius $border-radius 0;
+      
+      &:dir(rtl) {
+        border-radius: $border-radius 0 0 $border-radius;
+      }
+      
+      width: $container-height;
+      flex-shrink: 0;
+      svg {
+        width: $container-height * 0.7;
+        height: auto;
+        color: white;
+      }
+    }
+  }
+}

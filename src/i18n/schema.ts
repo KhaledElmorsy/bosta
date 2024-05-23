@@ -18,7 +18,13 @@ type DeliveryStatsKeys = z.infer<(typeof trackingEnums)['deliveryStateSchema']>;
 type EventReasonKeys = z.infer<(typeof trackingEnums)['eventReasonSchema']>;
 
 type CommonKeys = 'branch' | 'date' | 'time' | 'details';
-type NavKeys = 'home' | 'prices' | 'sales' | 'track' | 'login';
+type NavKeys =
+  | 'home'
+  | 'prices'
+  | 'sales'
+  | 'track'
+  | 'login'
+  | 'trackingNumber';
 type TrackingPageKeys =
   | 'shipmentNumber'
   | 'lastUpdate'
