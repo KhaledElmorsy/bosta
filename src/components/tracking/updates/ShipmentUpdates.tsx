@@ -24,7 +24,7 @@ export default function ShipmentUpdates() {
       <tbody>
         {fillEventHubs(shipment.TransitEvents).map((e) => {
           return (
-            <tr>
+            <tr  key={e.timestamp.toUTCString()}>
               <td>{e.hub ? t(`tracking.hub.${e.hub}`) : ''}</td>
               <td>{e.timestamp.toLocaleDateString()}</td>
               <td dir="ltr">
