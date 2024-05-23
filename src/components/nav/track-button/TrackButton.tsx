@@ -1,5 +1,5 @@
 import { useLocale } from '@/contexts/locale';
-import { useState, useRef } from 'react';
+import { useState, useRef, MouseEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { IoIosSearch } from 'react-icons/io';
 import { IoIosArrowBack } from 'react-icons/io';
@@ -22,14 +22,16 @@ export default function TrackButton({ className }: TrackButtonProps) {
   const { t, rtl } = useLocale();
   const arrow = rtl ? <IoIosArrowBack /> : <IoIosArrowForward />;
 
+  function handleToggle(e: MouseEvent<HTMLButtonElement>) {
+    if (e.target !== buttonRef.current) return;
+    setIsOpen((p) => !p);
+  }
+
   return (
     <button
       ref={buttonRef}
       className={clsx(style.trackButton, className, isOpen && style.open)}
-      onClick={(e) => {
-        if (e.target !== buttonRef.current) return;
-        setIsOpen((p) => !p);
-      }}
+      onClick={handleToggle}
     >
       {t('nav.track')}
       {isOpen ? arrow : <span style={{ color: '#e2e2e2' }}>&nbsp;&nbsp;|</span>}
