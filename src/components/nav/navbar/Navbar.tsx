@@ -19,6 +19,14 @@ export default function Navbar() {
     setShowMenu(false);
   }, [isMobile]);
 
+  useEffect(() => {
+    if (showMenu) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [showMenu])
+
   const links = {
     home: { href: '', title: t('nav.home') },
     prices: { href: '', title: t('nav.prices') },
