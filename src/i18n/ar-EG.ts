@@ -4,8 +4,8 @@ const enAR: LocaleTranslations = {
   common: {
     branch: 'الفرع',
     date: 'التاريخ',
-    details: 'الوقت',
-    time: 'تفاصيل',
+    details: 'تفاصيل',
+    time: 'الوقت',
   },
   nav: {
     home: 'الرئيسية',
